@@ -63,6 +63,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: var(--font-main);
     font-size: var(--fs-16);
@@ -85,18 +86,10 @@ body {
 
 
 }
-.menu {
-    max-width: 565px;
-    max-width: 16px;
-    top: 79px;
-}
-
 
 .menu__list {
     display: flex;
-    max-width: 74px;
-    max-height: 16px;
-    top: 16px;
+    align-items: center;
     gap: 42px;
 }
 
