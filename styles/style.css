@@ -84,6 +84,7 @@ p{
     max-width: var(--container);
     margin: 0 auto;
     padding: 0 15px;
+
 }
 .header {
     padding: 79px ;
@@ -156,16 +157,17 @@ p{
 .about {
     padding: 112px 0 100px;
     background: var(--white);
+
 }
 
-.about .container
+.about .container,
 .work__content{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about h2
+.about h2,
 .work__content h2 {
     color: var(--gray-900);
     font-size: var(--fs-32);
@@ -185,6 +187,8 @@ p{
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    background: var(--accent);
+    height: 250px;
 }
 .numbers__item {
     display: flex;
