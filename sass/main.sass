@@ -1,0 +1,248 @@
+@use "lib/variables" as vars
+@use "lib/mixins" as mixins
+
+// BASE
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  color: vars.$gray-500
+  background: vars.$gray-100
+  font-family: vars.$font-main
+  font-size: vars.$fs-16
+  font-weight: vars.$fw-regular
+  line-height: vars.$lh-164
+
+h1,
+h2,
+h3,
+p
+  margin-top: 0
+
+.container
+  max-width: vars.$container
+  margin: 0 auto
+  padding: 0 15px
+
+// HEADER
+
+.header
+  padding: 79px 0
+  background: vars.$gray-100
+
+.menu
+  &__list
+    display: flex
+    align-items: center
+    gap: 42px
+    margin: 0
+    padding: 0
+    list-style: none
+
+  &__link
+    color: vars.$gray-500
+    font-size: vars.$fs-16
+    font-weight: vars.$fw-regular
+    line-height: vars.$lh-164
+    letter-spacing: vars.$ls-10
+    text-decoration: none
+    text-transform: uppercase
+    transition: color vars.$transition
+
+    &:hover,
+    &:focus,
+    &--active
+      color: vars.$accent
+
+// HERO
+
+.hero
+  padding: 151px 0 141px
+  background: vars.$gray-100
+
+  &__content
+    max-width: 540px
+
+    h1
+      margin-bottom: 60px
+      color: vars.$gray-900
+      font-size: vars.$fs-48
+      font-weight: vars.$fw-medium
+      line-height: vars.$lh-120
+
+    p
+      margin-bottom: 65px
+
+// BUTTON
+
+.btn
+  @include mixins.flex-center
+
+  width: vars.$btn-width
+  height: vars.$btn-height
+  padding: 0
+  border: 0
+  border-radius: vars.$radius
+  color: vars.$white
+  background: vars.$accent
+  font: inherit
+  letter-spacing: vars.$ls-10
+  text-decoration: none
+  text-transform: uppercase
+  cursor: pointer
+  transition: background-color vars.$transition
+
+  &:hover,
+  &:focus
+    background: vars.$accent-hover
+
+// ABOUT
+
+.about
+  padding: 112px 0 100px
+  background: vars.$white
+
+  .container
+    @include mixins.flex-column-center
+
+  h2
+    margin-bottom: 60px
+    color: vars.$gray-900
+    font-size: vars.$fs-32
+    font-weight: vars.$fw-medium
+
+  p
+    max-width: 540px
+    margin: 0
+    text-align: center
+
+// NUMBERS
+
+.numbers
+  padding: 100px 0
+  background: vars.$accent
+
+  &__list
+    display: flex
+    justify-content: space-between
+    gap: vars.$gap
+    margin: 0
+    padding: 0
+    list-style: none
+
+  &__item
+    display: flex
+    align-items: center
+    gap: vars.$gap
+
+  &__icon
+    width: 50px
+    height: 50px
+
+  &__info
+    h3
+      margin-bottom: 5px
+      color: vars.$white
+      font-size: vars.$fs-21
+      font-weight: vars.$fw-medium
+      line-height: vars.$lh-100
+
+    p
+      margin-bottom: 0
+      color: vars.$white
+      line-height: vars.$lh-100
+
+// WORK
+
+.work
+  padding: vars.$section-padding 0
+  background: vars.$gray-100
+
+  &__content
+    @include mixins.flex-column-center
+
+    h2
+      margin-bottom: 60px
+      color: vars.$gray-900
+      font-size: vars.$fs-32
+      font-weight: vars.$fw-medium
+
+    p
+      max-width: 540px
+      margin: 0 0 57px
+      text-align: center
+
+  &__video
+    width: 100%
+
+    img
+      display: block
+      width: 100%
+      height: auto
+
+// FOOTER
+
+.footer
+  padding: 50px 0
+  background: vars.$accent
+
+  &__content
+    h3
+      margin-bottom: 20px
+      color: vars.$white
+      font-size: vars.$fs-21
+      font-weight: vars.$fw-medium
+
+    p
+      margin-bottom: 0
+      color: vars.$white
+      font-size: vars.$fs-14
+
+// TABLET — ДО 768px
+
+@include mixins.tablet
+  .header
+    padding: 35px 0
+
+  .menu__list,
+  .numbers__list
+    flex-wrap: wrap
+
+  .menu__list
+    gap: 15px 25px
+
+  .hero
+    padding: 80px 0
+
+  .numbers__item
+    width: calc(50% - 10px)
+
+// MOBILE — ДО 480px
+
+@include mixins.mobile
+  .header
+    padding: 20px 0
+
+  .menu__list
+    gap: 15px
+
+  .hero
+    padding: 60px 0
+
+    &__content
+      h1
+        font-size: vars.$fs-32
+
+  .numbers__item
+    width: 100%
+
+// ОТ 768px И БОЛЬШЕ
+
+@include mixins.tablet-up
+  .menu__list
+    flex-wrap: nowrap
+
+  .btn
+    width: vars.$btn-width
