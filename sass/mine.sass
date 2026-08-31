@@ -1,0 +1,31 @@
+.grid
+  display: flex
+  flex-wrap: wrap
+  gap: 30px
+
+figure
+  margin: 0
+  text-align: center
+
+figcaption
+  margin-top: 10px
+  font-size: 18pxsass
+
+.circle-animation
+  fill: #ffeb3b
+  stroke: #f44336
+  stroke-width: 8px
+  animation: change-circle-colors 3s infinite alternate
+
+@keyframes change-circle-colors
+  0%
+    fill: #ffeb3b
+    stroke: #f44336
+
+  50%
+    fill: #4caf50
+    stroke: #2196f3
+
+  100%
+    fill: #9c27b0
+    stroke: #ff9800

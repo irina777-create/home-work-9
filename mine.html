@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/mine.css">
+    <title>SVG-фігури</title>
+</head>
+<body>
+<h1>SVG: елементи для створення фігур</h1>
+
+<div class="grid">
+
+  <!-- Квадрат -->
+  <figure>
+    <svg width="120" height="120">
+      <rect
+              x="20"
+              y="20"
+              width="80"
+              height="80"
+              fill="rgb(0, 0, 255)"
+              stroke="black"
+              stroke-width="5"
+      />
+    </svg>
+
+    <figcaption>Квадрат — синій</figcaption>
+  </figure>
+
+  <!-- Прямокутник -->
+  <figure>
+    <svg width="170" height="120">
+      <rect
+              x="10"
+              y="20"
+              width="150"
+              height="80"
+              fill="rgb(0, 180, 0)"
+              stroke="darkgreen"
+              stroke-width="5"
+      />
+    </svg>
+
+    <figcaption>Прямокутник — зелений</figcaption>
+  </figure>
+
+  <!-- Коло -->
+  <figure>
+    <svg width="120" height="120">
+      <circle
+              cx="60"
+              cy="60"
+              r="40"
+              fill="rgb(255, 0, 0)"
+              stroke="darkred"
+              stroke-width="5"
+      />
+    </svg>
+    <figure>
+      <svg width="220" height="160">
+        <circle
+                class="circle-animation"
+                cx="110"
+                cy="80"
+                r="60"
+        />
+      </svg>
+
+      <figcaption>Коло з анімацією</figcaption>
+    </figure>
+
+    <figcaption>Коло — червоне</figcaption>
+  </figure>
+
+  <!-- Еліпс -->
+  <figure>
+    <svg width="180" height="120">
+      <ellipse
+              cx="90"
+              cy="60"
+              rx="75"
+              ry="40"
+              fill="rgb(255, 165, 0)"
+              stroke="brown"
+              stroke-width="5"
+      />
+    </svg>
+
+    <figcaption>Еліпс — помаранчевий</figcaption>
+  </figure>
+
+</div>
+
+</body>
+</html>
